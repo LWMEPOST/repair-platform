@@ -1,0 +1,98 @@
+:root {
+  /* 品牌色系 */
+  --primary-color: #2563EB;
+  --primary-light: #60A5FA;
+  --primary-gradient: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%);
+  --accent-color: #F97316;
+  
+  /* 背景色系 */
+  --bg-color: #F8FAFC;
+  --bg-gradient: linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 100%);
+  
+  /* 玻璃拟态 */
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.8);
+  --glass-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+  --backdrop-blur: blur(12px);
+
+  /* 布局 */
+  --card-radius: 16px;
+  --btn-radius: 12px;
+  --page-padding: 20px;
+
+  /* 字体 */
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  
+  /* Vant 主题覆盖 */
+  --van-primary-color: #2563EB;
+  --van-success-color: #10B981;
+  --van-warning-color: #F59E0B;
+  --van-danger-color: #EF4444;
+  --van-nav-bar-background: transparent;
+  --van-nav-bar-title-text-color: #1E293B;
+  --van-nav-bar-icon-color: #1E293B;
+  --van-tabbar-item-active-color: #2563EB;
+  --van-button-primary-background: var(--primary-color);
+  --van-button-primary-border-color: var(--primary-color);
+  --van-button-radius: var(--btn-radius);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: #1E293B;
+}
+
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* 全局卡片样式 */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: var(--glass-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--glass-shadow);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+/* 页面容器通用样式 */
+.page-container {
+  padding: var(--page-padding);
+  padding-bottom: 80px; /* 留出底部导航空间 */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 导航栏透明化 */
+.van-nav-bar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.van-nav-bar::after {
+  display: none;
+}
+
+/* 按钮渐变增强 */
+.btn-gradient {
+  background: var(--primary-gradient) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
